@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/PageHeader";
 const faqs = [
   ["Is CarryLink a shipping company?", "No. This MVP is a matching platform concept. Users coordinate directly and remain responsible for legal compliance and delivery arrangements."],
   ["Can travelers inspect items?", "Yes. Travelers should only accept items they can inspect and understand. Senders should never ask someone to carry hidden or undeclared goods."],
-  ["How does matching work?", "The mock matcher scores route, city, country, date proximity, and item weight compatibility."],
+  ["How does matching work?", "The matching system scores route, city, country, date proximity, and item weight compatibility."],
   ["How will real authentication work later?", "The project is structured so Supabase Auth, database tables, storage, and realtime chat can be added behind the existing interfaces."],
   ["Who sets compensation?", "Senders and travelers agree on compensation in chat before handoff."]
 ];

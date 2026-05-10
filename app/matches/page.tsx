@@ -12,7 +12,7 @@ export default async function MatchesPage() {
   const matches = getMatchesForData(trips, deliveryRequests);
   return (
     <>
-      <PageHeader title="Matches" description="A mock ranked list based on route similarity, destination fit, date range, and item weight." />
+      <PageHeader title="Matches" description="A ranked list based on route similarity, destination fit, date range, and item weight." />
       <section className="section">
         <AdSlot slot="9999999999" format="horizontal" className="mb-6" />
         <div className="grid gap-6">

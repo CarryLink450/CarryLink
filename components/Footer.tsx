@@ -8,7 +8,7 @@ export function Footer() {
         <div>
           <p className="font-semibold text-ink">{brandName}</p>
           <p className="mt-2 max-w-md">
-            A mock MVP for trusted peer-to-peer travel delivery matching. Users remain responsible for all customs, airline, and legal requirements.
+            A Platform for trusted peer-to-peer travel delivery matching. Users remain responsible for all customs, airline, and legal requirements.
           </p>
         </div>
         <div className="grid gap-2">
