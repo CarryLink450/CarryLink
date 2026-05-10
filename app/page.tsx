@@ -2,16 +2,30 @@ import { ArrowRight, CheckCircle2, Handshake, Plane, ShieldCheck } from "lucide-
 import Image from "next/image";
 import { AdSlot } from "@/components/AdSlot";
 import { ButtonLink } from "@/components/ButtonLink";
-import { PageHeader } from "@/components/PageHeader";
 import { TripCard } from "@/components/TripCard";
 import { getAppData, getCurrentAccount } from "@/lib/data";
 import { filterTripsForUserCountries } from "@/lib/matching";
 import { brandName } from "@/lib/utils";
 
 const steps = [
-  { title: "Post a need or trip", text: "Senders describe the item and route. Travelers list dates, space, accepted items, and handoff preferences.", icon: Plane },
-  { title: "Review trusted matches", text: "Mock matching ranks routes and dates so users can quickly spot strong fit opportunities.", icon: Handshake },
-  { title: "Chat and agree", text: "Both sides confirm item details, compensation, handoff location, delivery location, and safety expectations.", icon: CheckCircle2 }
+  {
+    title: "Post a need or trip",
+    text: "Senders describe the item and route. Travelers list dates, space, accepted items, and handoff preferences.",
+    icon: Plane,
+    className: "border-trust/15 bg-skywash"
+  },
+  {
+    title: "Review trusted matches",
+    text: "Matching ranks routes and dates so users can quickly spot strong fit opportunities.",
+    icon: Handshake,
+    className: "border-wheat bg-wheat/70"
+  },
+  {
+    title: "Chat and agree",
+    text: "Both sides confirm item details, compensation, handoff location, delivery location, and safety expectations.",
+    icon: CheckCircle2,
+    className: "border-coral/15 bg-coral/5"
+  }
 ];
 
 const routes = ["Montreal to Beirut", "Beirut to Montreal", "Paris to Dakar", "Toronto to Singapore", "Dubai to Manila", "London to Accra"];
@@ -111,7 +125,7 @@ export default async function HomePage() {
         <AdSlot slot="1111111111" format="horizontal" className="mb-8" />
         <div className="grid gap-4 md:grid-cols-3">
           {steps.map((step) => (
-            <article key={step.title} className="rounded-lg border border-slate-200 bg-white p-5 shadow-soft">
+            <article key={step.title} className={`rounded-lg border p-5 shadow-soft ${step.className}`}>
               <step.icon className="text-trust" size={26} aria-hidden />
               <h2 className="mt-4 text-lg font-semibold text-ink">{step.title}</h2>
               <p className="mt-2 text-sm leading-6 text-slate-600">{step.text}</p>
@@ -122,12 +136,14 @@ export default async function HomePage() {
 
       <section className="bg-skywash">
         <div className="section grid gap-8 lg:grid-cols-2">
-          <div>
-            <PageHeader title="For Senders" description="Create a delivery request, compare route matches, and message travelers who fit your timeline." />
-          </div>
-          <div>
-            <PageHeader title="For Travelers" description="Post available luggage space, set item restrictions, and receive requests that match your itinerary." />
-          </div>
+          <article className="rounded-lg bg-trust p-6 text-white shadow-soft">
+            <h2 className="text-2xl font-semibold">For Senders</h2>
+            <p className="mt-3 max-w-2xl leading-7 text-white/85">Create a delivery request, compare route matches, and message travelers who fit your timeline.</p>
+          </article>
+          <article className="rounded-lg bg-coral p-6 text-white shadow-soft">
+            <h2 className="text-2xl font-semibold">For Travelers</h2>
+            <p className="mt-3 max-w-2xl leading-7 text-white/85">Post available luggage space, set item restrictions, and receive requests that match your itinerary.</p>
+          </article>
         </div>
       </section>
 
@@ -143,7 +159,7 @@ export default async function HomePage() {
             Users must avoid prohibited, illegal, dangerous, restricted, or undeclared items and follow airline, customs, and destination-country laws.
           </p>
           <div className="mt-5">
-            <ButtonLink href="/safety" variant="outline">Read Safety Guidelines</ButtonLink>
+            <ButtonLink href="/safety" variant="secondary">Read Safety Guidelines</ButtonLink>
           </div>
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
