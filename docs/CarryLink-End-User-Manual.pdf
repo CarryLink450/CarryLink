@@ -1,0 +1,565 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 2815 >>
+stream
+BT /F2 24 Tf 54.00 738.00 Td (CarryLink End User Manual) Tj ET
+BT /F1 10 Tf 54.00 685.75 Td (Version: MVP user guide) Tj ET
+BT /F1 10 Tf 54.00 662.50 Td (This manual explains how end users can use CarryLink to send items with travelers, post trips, find) Tj ET
+BT /F1 10 Tf 54.00 647.50 Td (matches, message other users, and follow safety rules. It is written for senders, travelers, and people) Tj ET
+BT /F1 10 Tf 54.00 632.50 Td (who use the platform as both.) Tj ET
+BT /F2 16 Tf 54.00 599.25 Td (1. What CarryLink Does) Tj ET
+BT /F1 10 Tf 54.00 564.00 Td (CarryLink is a peer-to-peer travel delivery matching website. It helps people who live outside their home) Tj ET
+BT /F1 10 Tf 54.00 549.00 Td (countries connect with travelers already going between two places.) Tj ET
+BT /F1 10 Tf 54.00 525.75 Td (Example: a Lebanese person living in Canada wants to send a small gift, document, or package to Lebanon.) Tj ET
+BT /F1 10 Tf 54.00 510.75 Td (Instead of using expensive international shipping, the sender can find a traveler going from Canada to) Tj ET
+BT /F1 10 Tf 54.00 495.75 Td (Lebanon and agree on handoff details, compensation, and delivery details.) Tj ET
+BT /F1 10 Tf 54.00 472.50 Td (CarryLink can also work in the opposite direction, such as Lebanon to Canada, or for other international) Tj ET
+BT /F1 10 Tf 54.00 457.50 Td (routes.) Tj ET
+BT /F1 10 Tf 54.00 434.25 Td (CarryLink is a matching and communication platform. It does not inspect items, does not guarantee) Tj ET
+BT /F1 10 Tf 54.00 419.25 Td (delivery, and does not replace airline, airport, customs, or destination-country rules.) Tj ET
+BT /F2 16 Tf 54.00 386.00 Td (2. Main User Types) Tj ET
+BT /F2 12 Tf 54.00 344.75 Td (Sender or Requester) Tj ET
+BT /F1 10 Tf 54.00 316.50 Td (A sender wants to send an item from one place to another. A sender can:) Tj ET
+BT /F1 10 Tf 66.00 293.25 Td (- Create a delivery request.) Tj ET
+BT /F1 10 Tf 66.00 278.25 Td (- Search for travelers.) Tj ET
+BT /F1 10 Tf 66.00 263.25 Td (- View suggested travelers.) Tj ET
+BT /F1 10 Tf 66.00 248.25 Td (- View matches.) Tj ET
+BT /F1 10 Tf 66.00 233.25 Td (- Message travelers.) Tj ET
+BT /F1 10 Tf 66.00 218.25 Td (- Agree on handoff and delivery details.) Tj ET
+BT /F2 12 Tf 54.00 189.00 Td (Traveler or Carrier) Tj ET
+BT /F1 10 Tf 54.00 160.75 Td (A traveler is already traveling between two places and may have available luggage space. A traveler can:) Tj ET
+BT /F1 10 Tf 66.00 137.50 Td (- Post a trip.) Tj ET
+BT /F1 10 Tf 66.00 122.50 Td (- State origin, destination, travel dates, and available space.) Tj ET
+BT /F1 10 Tf 66.00 107.50 Td (- Set accepted item types and restricted item types.) Tj ET
+BT /F1 10 Tf 66.00 92.50 Td (- Receive message conversations from senders.) Tj ET
+BT /F1 10 Tf 66.00 77.50 Td (- Review matching delivery requests.) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Length 2440 >>
+stream
+BT /F2 12 Tf 54.00 732.00 Td (Both) Tj ET
+BT /F1 10 Tf 54.00 703.75 Td (Some users may sometimes send items and sometimes carry items. These users can choose both roles during) Tj ET
+BT /F1 10 Tf 54.00 688.75 Td (signup or in their profile.) Tj ET
+BT /F2 16 Tf 54.00 655.50 Td (3. Before You Start) Tj ET
+BT /F1 10 Tf 54.00 620.25 Td (You need an account before using the main platform functions. Registration is required before:) Tj ET
+BT /F1 10 Tf 66.00 597.00 Td (- Posting a trip.) Tj ET
+BT /F1 10 Tf 66.00 582.00 Td (- Creating a delivery request.) Tj ET
+BT /F1 10 Tf 66.00 567.00 Td (- Searching for travelers as a logged-in user.) Tj ET
+BT /F1 10 Tf 66.00 552.00 Td (- Messaging another user.) Tj ET
+BT /F1 10 Tf 66.00 537.00 Td (- Viewing dashboard information.) Tj ET
+BT /F1 10 Tf 66.00 522.00 Td (- Managing profile information.) Tj ET
+BT /F1 10 Tf 54.00 498.75 Td (You should also know:) Tj ET
+BT /F1 10 Tf 66.00 475.50 Td (- Your current country.) Tj ET
+BT /F1 10 Tf 66.00 460.50 Td (- Your home country.) Tj ET
+BT /F1 10 Tf 66.00 445.50 Td (- Your email and phone number.) Tj ET
+BT /F1 10 Tf 66.00 430.50 Td (- Whether you are mainly a sender, traveler, or both.) Tj ET
+BT /F2 16 Tf 54.00 397.25 Td (4. Creating an Account) Tj ET
+BT /F1 10 Tf 66.00 362.00 Td (1. Open CarryLink.) Tj ET
+BT /F1 10 Tf 66.00 347.00 Td (2. Select Sign up from the top menu.) Tj ET
+BT /F1 10 Tf 66.00 332.00 Td (3. Enter your full name.) Tj ET
+BT /F1 10 Tf 66.00 317.00 Td (4. Enter your email address.) Tj ET
+BT /F1 10 Tf 66.00 302.00 Td (5. Enter your phone number.) Tj ET
+BT /F1 10 Tf 66.00 287.00 Td (6. Enter your current country.) Tj ET
+BT /F1 10 Tf 66.00 272.00 Td (7. Enter your home country.) Tj ET
+BT /F1 10 Tf 66.00 257.00 Td (8. Choose your user type: Sender, Traveler, or Both.) Tj ET
+BT /F1 10 Tf 66.00 242.00 Td (9. Enter a password.) Tj ET
+BT /F1 10 Tf 66.00 227.00 Td (10. Submit the form.) Tj ET
+BT /F1 10 Tf 54.00 203.75 Td (After signup, you should be logged in and sent to your dashboard. If the website asks you to log in, use) Tj ET
+BT /F1 10 Tf 54.00 188.75 Td (the same email and password you used during signup.) Tj ET
+BT /F2 16 Tf 54.00 155.50 Td (5. Logging In) Tj ET
+BT /F1 10 Tf 66.00 120.25 Td (1. Select Login from the top menu.) Tj ET
+BT /F1 10 Tf 66.00 105.25 Td (2. Enter your email address.) Tj ET
+BT /F1 10 Tf 66.00 90.25 Td (3. Enter your password.) Tj ET
+BT /F1 10 Tf 66.00 75.25 Td (4. Submit the form.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 2696 >>
+stream
+BT /F1 10 Tf 54.00 738.00 Td (After login, the top right of the website should show your profile button instead of Login and Sign up.) Tj ET
+BT /F2 16 Tf 54.00 704.75 Td (6. Automatic Logout After Inactivity) Tj ET
+BT /F1 10 Tf 54.00 669.50 Td (For account safety, CarryLink logs users out after 2 minutes of inactivity.) Tj ET
+BT /F1 10 Tf 54.00 646.25 Td (Activity includes:) Tj ET
+BT /F1 10 Tf 66.00 623.00 Td (- Clicking.) Tj ET
+BT /F1 10 Tf 66.00 608.00 Td (- Typing.) Tj ET
+BT /F1 10 Tf 66.00 593.00 Td (- Moving the mouse.) Tj ET
+BT /F1 10 Tf 66.00 578.00 Td (- Scrolling.) Tj ET
+BT /F1 10 Tf 66.00 563.00 Td (- Touching the screen on mobile.) Tj ET
+BT /F1 10 Tf 54.00 539.75 Td (Auto-refresh for messages does not keep your session alive. If you stop using the website, the session) Tj ET
+BT /F1 10 Tf 54.00 524.75 Td (timeout still logs you out.) Tj ET
+BT /F2 16 Tf 54.00 491.50 Td (7. Navigation Menu) Tj ET
+BT /F1 10 Tf 54.00 456.25 Td (The top menu gives quick access to:) Tj ET
+BT /F1 10 Tf 66.00 433.00 Td (- Home: the main page with explanation and suggested trips.) Tj ET
+BT /F1 10 Tf 66.00 418.00 Td (- Find Traveler: search for available traveler trips.) Tj ET
+BT /F1 10 Tf 66.00 403.00 Td (- Post Trip: create a new traveler trip.) Tj ET
+BT /F1 10 Tf 66.00 388.00 Td (- Matches: view route and date matches.) Tj ET
+BT /F1 10 Tf 66.00 373.00 Td (- Dashboard: see your requests, trips, matches, and conversations.) Tj ET
+BT /F1 10 Tf 66.00 358.00 Td (- Safety: read prohibited item and compliance guidance.) Tj ET
+BT /F1 10 Tf 66.00 343.00 Td (- Profile: manage your personal details when logged in.) Tj ET
+BT /F1 10 Tf 66.00 328.00 Td (- Logout icon: sign out when logged in.) Tj ET
+BT /F2 16 Tf 54.00 294.75 Td (8. Home Page Overview) Tj ET
+BT /F1 10 Tf 54.00 259.50 Td (The home page explains the CarryLink service and shows suggested posted trips. If you are logged in and) Tj ET
+BT /F1 10 Tf 54.00 244.50 Td (your profile has a current country and home country, suggested trips are filtered to routes connected to) Tj ET
+BT /F1 10 Tf 54.00 229.50 Td (at least one of those countries.) Tj ET
+BT /F1 10 Tf 54.00 206.25 Td (For example, if your current country is Canada and your home country is Lebanon, the default suggested) Tj ET
+BT /F1 10 Tf 54.00 191.25 Td (trips may include:) Tj ET
+BT /F1 10 Tf 66.00 168.00 Td (- Canada to Lebanon.) Tj ET
+BT /F1 10 Tf 66.00 153.00 Td (- Lebanon to Canada.) Tj ET
+BT /F1 10 Tf 66.00 138.00 Td (- Canada to another country.) Tj ET
+BT /F1 10 Tf 66.00 123.00 Td (- Another country to Lebanon.) Tj ET
+BT /F1 10 Tf 54.00 99.75 Td (The home page can also show a new message badge on a trip when a related conversation has a new reply.) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 2551 >>
+stream
+BT /F2 16 Tf 54.00 728.00 Td (9. Updating Your Profile) Tj ET
+BT /F1 10 Tf 66.00 692.75 Td (1. Log in.) Tj ET
+BT /F1 10 Tf 66.00 677.75 Td (2. Select your profile button in the top right.) Tj ET
+BT /F1 10 Tf 66.00 662.75 Td (3. Review your profile fields.) Tj ET
+BT /F1 10 Tf 66.00 647.75 Td (4. Update your full name, email, phone number, current country, home country, or user type.) Tj ET
+BT /F1 10 Tf 66.00 632.75 Td (5. Optionally upload a profile photo.) Tj ET
+BT /F1 10 Tf 66.00 617.75 Td (6. Save the changes.) Tj ET
+BT /F1 10 Tf 54.00 594.50 Td (Your current country and home country are important because CarryLink uses them to suggest relevant) Tj ET
+BT /F1 10 Tf 54.00 579.50 Td (trips.) Tj ET
+BT /F2 16 Tf 54.00 546.25 Td (10. Sender Scenario: Sending an Item) Tj ET
+BT /F1 10 Tf 54.00 511.00 Td (Use this scenario when you want to send something from one place to another.) Tj ET
+BT /F2 12 Tf 54.00 481.75 Td (Step 1: Create a Delivery Request) Tj ET
+BT /F1 10 Tf 66.00 453.50 Td (1. Log in.) Tj ET
+BT /F1 10 Tf 66.00 438.50 Td (2. Go to Create Delivery Request.) Tj ET
+BT /F1 10 Tf 66.00 423.50 Td (3. Enter the origin country.) Tj ET
+BT /F1 10 Tf 66.00 408.50 Td (4. Enter the origin city.) Tj ET
+BT /F1 10 Tf 66.00 393.50 Td (5. Enter the destination country.) Tj ET
+BT /F1 10 Tf 66.00 378.50 Td (6. Enter the destination city.) Tj ET
+BT /F1 10 Tf 66.00 363.50 Td (7. Choose your preferred date range.) Tj ET
+BT /F1 10 Tf 66.00 348.50 Td (8. Choose an item category.) Tj ET
+BT /F1 10 Tf 66.00 333.50 Td (9. Describe the item clearly.) Tj ET
+BT /F1 10 Tf 66.00 318.50 Td (10. Enter approximate size.) Tj ET
+BT /F1 10 Tf 66.00 303.50 Td (11. Enter approximate weight.) Tj ET
+BT /F1 10 Tf 66.00 288.50 Td (12. Choose whether the item is sealed.) Tj ET
+BT /F1 10 Tf 66.00 273.50 Td (13. Enter offered compensation.) Tj ET
+BT /F1 10 Tf 66.00 258.50 Td (14. Enter pickup flexibility.) Tj ET
+BT /F1 10 Tf 66.00 243.50 Td (15. Enter delivery flexibility.) Tj ET
+BT /F1 10 Tf 66.00 228.50 Td (16. Confirm the legal item checkbox.) Tj ET
+BT /F1 10 Tf 66.00 213.50 Td (17. Submit the request.) Tj ET
+BT /F2 12 Tf 54.00 184.25 Td (Step 2: Search for Travelers) Tj ET
+BT /F1 10 Tf 66.00 156.00 Td (1. Go to Find Traveler.) Tj ET
+BT /F1 10 Tf 66.00 141.00 Td (2. Use the From field to enter an origin country or city.) Tj ET
+BT /F1 10 Tf 66.00 126.00 Td (3. Use the To field to enter a destination country or city.) Tj ET
+BT /F1 10 Tf 66.00 111.00 Td (4. Optionally choose a travel date.) Tj ET
+BT /F1 10 Tf 66.00 96.00 Td (5. Select Search.) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 2405 >>
+stream
+BT /F1 10 Tf 54.00 738.00 Td (The search can match by country or city. If you choose a date, CarryLink searches for trips where the) Tj ET
+BT /F1 10 Tf 54.00 723.00 Td (selected date is between the traveler's departure and arrival dates.) Tj ET
+BT /F2 12 Tf 54.00 693.75 Td (Step 3: Review Traveler Cards) Tj ET
+BT /F1 10 Tf 54.00 665.50 Td (Each traveler card may show:) Tj ET
+BT /F1 10 Tf 66.00 642.25 Td (- Traveler name.) Tj ET
+BT /F1 10 Tf 66.00 627.25 Td (- Route.) Tj ET
+BT /F1 10 Tf 66.00 612.25 Td (- Countries.) Tj ET
+BT /F1 10 Tf 66.00 597.25 Td (- Departure and arrival dates.) Tj ET
+BT /F1 10 Tf 66.00 582.25 Td (- Available luggage space.) Tj ET
+BT /F1 10 Tf 66.00 567.25 Td (- Accepted item types.) Tj ET
+BT /F1 10 Tf 66.00 552.25 Td (- Expected compensation.) Tj ET
+BT /F1 10 Tf 66.00 537.25 Td (- Match strength.) Tj ET
+BT /F1 10 Tf 66.00 522.25 Td (- View Details button.) Tj ET
+BT /F1 10 Tf 66.00 507.25 Td (- Send Message button.) Tj ET
+BT /F2 12 Tf 54.00 478.00 Td (Step 4: Message the Traveler) Tj ET
+BT /F1 10 Tf 66.00 449.75 Td (1. Select Send Message on a traveler card.) Tj ET
+BT /F1 10 Tf 66.00 434.75 Td (2. Write your message.) Tj ET
+BT /F1 10 Tf 66.00 419.75 Td (3. Include important context:) Tj ET
+BT /F1 10 Tf 66.00 404.75 Td (- What you want to send.) Tj ET
+BT /F1 10 Tf 66.00 389.75 Td (- Pickup city and area.) Tj ET
+BT /F1 10 Tf 66.00 374.75 Td (- Delivery city and area.) Tj ET
+BT /F1 10 Tf 66.00 359.75 Td (- Preferred date.) Tj ET
+BT /F1 10 Tf 66.00 344.75 Td (- Whether the item can be opened for inspection.) Tj ET
+BT /F1 10 Tf 66.00 329.75 Td (- Compensation offer.) Tj ET
+BT /F1 10 Tf 66.00 314.75 Td (4. Send the message.) Tj ET
+BT /F2 12 Tf 54.00 285.50 Td (Step 5: Agree on Details) Tj ET
+BT /F1 10 Tf 54.00 257.25 Td (Before handing over anything, both sides should agree on:) Tj ET
+BT /F1 10 Tf 66.00 234.00 Td (- Exact item description.) Tj ET
+BT /F1 10 Tf 66.00 219.00 Td (- Whether the traveler can inspect the item.) Tj ET
+BT /F1 10 Tf 66.00 204.00 Td (- Pickup location.) Tj ET
+BT /F1 10 Tf 66.00 189.00 Td (- Delivery location.) Tj ET
+BT /F1 10 Tf 66.00 174.00 Td (- Pickup time.) Tj ET
+BT /F1 10 Tf 66.00 159.00 Td (- Delivery expectations.) Tj ET
+BT /F1 10 Tf 66.00 144.00 Td (- Compensation.) Tj ET
+BT /F1 10 Tf 66.00 129.00 Td (- What happens if travel plans change.) Tj ET
+BT /F1 10 Tf 66.00 114.00 Td (- What laws or airline rules apply.) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 2496 >>
+stream
+BT /F2 16 Tf 54.00 728.00 Td (11. Traveler Scenario: Posting a Trip) Tj ET
+BT /F1 10 Tf 54.00 692.75 Td (Use this scenario when you are traveling and may carry a small item for someone.) Tj ET
+BT /F2 12 Tf 54.00 663.50 Td (Step 1: Post Your Trip) Tj ET
+BT /F1 10 Tf 66.00 635.25 Td (1. Log in.) Tj ET
+BT /F1 10 Tf 66.00 620.25 Td (2. Select Post Trip.) Tj ET
+BT /F1 10 Tf 66.00 605.25 Td (3. Enter From country.) Tj ET
+BT /F1 10 Tf 66.00 590.25 Td (4. Enter From city.) Tj ET
+BT /F1 10 Tf 66.00 575.25 Td (5. Enter To country.) Tj ET
+BT /F1 10 Tf 66.00 560.25 Td (6. Enter To city.) Tj ET
+BT /F1 10 Tf 66.00 545.25 Td (7. Choose a departure date.) Tj ET
+BT /F1 10 Tf 66.00 530.25 Td (8. Choose an arrival date.) Tj ET
+BT /F1 10 Tf 66.00 515.25 Td (9. Enter available luggage space.) Tj ET
+BT /F1 10 Tf 66.00 500.25 Td (10. Enter maximum item weight.) Tj ET
+BT /F1 10 Tf 66.00 485.25 Td (11. Enter accepted item types.) Tj ET
+BT /F1 10 Tf 66.00 470.25 Td (12. Enter items you do not accept.) Tj ET
+BT /F1 10 Tf 66.00 455.25 Td (13. Enter expected compensation.) Tj ET
+BT /F1 10 Tf 66.00 440.25 Td (14. Enter meeting preferences.) Tj ET
+BT /F1 10 Tf 66.00 425.25 Td (15. Add notes.) Tj ET
+BT /F1 10 Tf 66.00 410.25 Td (16. Submit the trip.) Tj ET
+BT /F1 10 Tf 54.00 387.00 Td (You cannot post a trip with a past departure date or past arrival date. The arrival date also cannot be) Tj ET
+BT /F1 10 Tf 54.00 372.00 Td (earlier than the departure date.) Tj ET
+BT /F2 12 Tf 54.00 342.75 Td (Step 2: View Your Posted Trip) Tj ET
+BT /F1 10 Tf 54.00 314.50 Td (After saving a trip, go to Dashboard. Your trip should appear under My posted trips.) Tj ET
+BT /F2 12 Tf 54.00 285.25 Td (Step 3: Receive Messages) Tj ET
+BT /F1 10 Tf 54.00 257.00 Td (If a sender messages you about your trip:) Tj ET
+BT /F1 10 Tf 66.00 233.75 Td (- The conversation appears in My conversations.) Tj ET
+BT /F1 10 Tf 66.00 218.75 Td (- Trips with new messages may appear in the dashboard.) Tj ET
+BT /F1 10 Tf 66.00 203.75 Td (- The trip card may show a new message badge.) Tj ET
+BT /F1 10 Tf 54.00 180.50 Td (You cannot message yourself from your own trip. Your own trip card should show View Messages instead of) Tj ET
+BT /F1 10 Tf 54.00 165.50 Td (Send Message.) Tj ET
+BT /F2 12 Tf 54.00 136.25 Td (Step 4: Reply to the Sender) Tj ET
+BT /F1 10 Tf 66.00 108.00 Td (1. Open Dashboard or Chat.) Tj ET
+BT /F1 10 Tf 66.00 93.00 Td (2. Select the conversation.) Tj ET
+BT /F1 10 Tf 66.00 78.00 Td (3. Read the sender's message.) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 2350 >>
+stream
+BT /F1 10 Tf 66.00 738.00 Td (4. Reply with your requirements.) Tj ET
+BT /F1 10 Tf 54.00 714.75 Td (Important traveler questions:) Tj ET
+BT /F1 10 Tf 66.00 691.50 Td (- What exactly is the item?) Tj ET
+BT /F1 10 Tf 66.00 676.50 Td (- Is it legal in origin and destination countries?) Tj ET
+BT /F1 10 Tf 66.00 661.50 Td (- Is it allowed by the airline?) Tj ET
+BT /F1 10 Tf 66.00 646.50 Td (- Can I inspect it before accepting?) Tj ET
+BT /F1 10 Tf 66.00 631.50 Td (- How much does it weigh?) Tj ET
+BT /F1 10 Tf 66.00 616.50 Td (- How large is it?) Tj ET
+BT /F1 10 Tf 66.00 601.50 Td (- Where will pickup happen?) Tj ET
+BT /F1 10 Tf 66.00 586.50 Td (- Where will delivery happen?) Tj ET
+BT /F1 10 Tf 66.00 571.50 Td (- What compensation is offered?) Tj ET
+BT /F2 16 Tf 54.00 538.25 Td (12. Using Matches) Tj ET
+BT /F1 10 Tf 54.00 503.00 Td (The Matches page shows route and date matches between trips and delivery requests.) Tj ET
+BT /F1 10 Tf 54.00 479.75 Td (Match strength labels include:) Tj ET
+BT /F1 10 Tf 66.00 456.50 Td (- Strong Match.) Tj ET
+BT /F1 10 Tf 66.00 441.50 Td (- Good Match.) Tj ET
+BT /F1 10 Tf 66.00 426.50 Td (- Possible Match.) Tj ET
+BT /F1 10 Tf 54.00 403.25 Td (A match may consider:) Tj ET
+BT /F1 10 Tf 66.00 380.00 Td (- Similar origin country.) Tj ET
+BT /F1 10 Tf 66.00 365.00 Td (- Similar origin city.) Tj ET
+BT /F1 10 Tf 66.00 350.00 Td (- Similar destination country.) Tj ET
+BT /F1 10 Tf 66.00 335.00 Td (- Similar destination city.) Tj ET
+BT /F1 10 Tf 66.00 320.00 Td (- Travel date fitting the request date range.) Tj ET
+BT /F1 10 Tf 66.00 305.00 Td (- Item weight fitting the trip capacity.) Tj ET
+BT /F1 10 Tf 54.00 281.75 Td (From the Dashboard, the My Matches section is clickable. Selecting a match opens the relevant match on) Tj ET
+BT /F1 10 Tf 54.00 266.75 Td (the Matches page.) Tj ET
+BT /F2 16 Tf 54.00 233.50 Td (13. Chat and Conversations) Tj ET
+BT /F1 10 Tf 54.00 198.25 Td (The Chat page has:) Tj ET
+BT /F1 10 Tf 66.00 175.00 Td (- A conversation list.) Tj ET
+BT /F1 10 Tf 66.00 160.00 Td (- A message thread.) Tj ET
+BT /F1 10 Tf 66.00 145.00 Td (- A message input.) Tj ET
+BT /F1 10 Tf 66.00 130.00 Td (- A send button.) Tj ET
+BT /F1 10 Tf 54.00 106.75 Td (Use chat to coordinate details after finding a possible match.) Tj ET
+BT /F1 10 Tf 54.00 83.50 Td (Good first message example from a sender:) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 2488 >>
+stream
+BT /F1 10 Tf 54.00 738.00 Td (Hello, I saw your Montreal to Beirut trip. I want to send a small envelope with documents, around 0.2 kg.) Tj ET
+BT /F1 10 Tf 54.00 723.00 Td (It can be opened and inspected. Pickup can be in Laval or downtown Montreal. Delivery is in Beirut. Are) Tj ET
+BT /F1 10 Tf 54.00 708.00 Td (you comfortable carrying this?) Tj ET
+BT /F1 10 Tf 54.00 684.75 Td (Good reply example from a traveler:) Tj ET
+BT /F1 10 Tf 54.00 661.50 Td (Hi, yes, I can consider documents if they are legal and I can inspect them first. I am leaving on May 20) Tj ET
+BT /F1 10 Tf 54.00 646.50 Td (and arriving May 21. I prefer pickup near YUL or downtown Montreal. Please confirm the exact contents and) Tj ET
+BT /F1 10 Tf 54.00 631.50 Td (whether customs declaration is needed.) Tj ET
+BT /F2 16 Tf 54.00 598.25 Td (14. Auto-Refresh for New Messages) Tj ET
+BT /F1 10 Tf 54.00 563.00 Td (CarryLink refreshes message-aware pages automatically so you can see new messages without manually) Tj ET
+BT /F1 10 Tf 54.00 548.00 Td (refreshing.) Tj ET
+BT /F1 10 Tf 54.00 524.75 Td (Auto-refresh applies to:) Tj ET
+BT /F1 10 Tf 66.00 501.50 Td (- Home page.) Tj ET
+BT /F1 10 Tf 66.00 486.50 Td (- Dashboard.) Tj ET
+BT /F1 10 Tf 66.00 471.50 Td (- Chat page.) Tj ET
+BT /F1 10 Tf 54.00 448.25 Td (It refreshes only when you were recently active. It pauses when:) Tj ET
+BT /F1 10 Tf 66.00 425.00 Td (- You are typing.) Tj ET
+BT /F1 10 Tf 66.00 410.00 Td (- The browser tab is hidden.) Tj ET
+BT /F1 10 Tf 66.00 395.00 Td (- You have been inactive long enough that the session timeout should take over.) Tj ET
+BT /F2 16 Tf 54.00 361.75 Td (15. Dashboard Guide) Tj ET
+BT /F1 10 Tf 54.00 326.50 Td (The Dashboard shows:) Tj ET
+BT /F1 10 Tf 66.00 303.25 Td (- Active delivery requests.) Tj ET
+BT /F1 10 Tf 66.00 288.25 Td (- Posted trips.) Tj ET
+BT /F1 10 Tf 66.00 273.25 Td (- Open matches.) Tj ET
+BT /F1 10 Tf 66.00 258.25 Td (- Conversations.) Tj ET
+BT /F1 10 Tf 66.00 243.25 Td (- Trips with new messages.) Tj ET
+BT /F1 10 Tf 66.00 228.25 Td (- My active delivery requests.) Tj ET
+BT /F1 10 Tf 66.00 213.25 Td (- My posted trips.) Tj ET
+BT /F1 10 Tf 66.00 198.25 Td (- My matches.) Tj ET
+BT /F1 10 Tf 66.00 183.25 Td (- My conversations.) Tj ET
+BT /F1 10 Tf 54.00 160.00 Td (Use the dashboard as your main control center.) Tj ET
+BT /F2 16 Tf 54.00 126.75 Td (16. Safety Rules) Tj ET
+BT /F1 10 Tf 54.00 91.50 Td (Users must not send prohibited, illegal, dangerous, restricted, or undeclared items.) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 2695 >>
+stream
+BT /F1 10 Tf 54.00 738.00 Td (Examples of prohibited or restricted items include:) Tj ET
+BT /F1 10 Tf 66.00 714.75 Td (- Drugs.) Tj ET
+BT /F1 10 Tf 66.00 699.75 Td (- Weapons.) Tj ET
+BT /F1 10 Tf 66.00 684.75 Td (- Cash over legal limits.) Tj ET
+BT /F1 10 Tf 66.00 669.75 Td (- Alcohol or tobacco where restricted.) Tj ET
+BT /F1 10 Tf 66.00 654.75 Td (- Batteries or electronics where airline rules restrict them.) Tj ET
+BT /F1 10 Tf 66.00 639.75 Td (- Medicine without prescription or authorization.) Tj ET
+BT /F1 10 Tf 66.00 624.75 Td (- Any customs-restricted item.) Tj ET
+BT /F1 10 Tf 54.00 601.50 Td (Users are responsible for following:) Tj ET
+BT /F1 10 Tf 66.00 578.25 Td (- Airline rules.) Tj ET
+BT /F1 10 Tf 66.00 563.25 Td (- Airport rules.) Tj ET
+BT /F1 10 Tf 66.00 548.25 Td (- Customs rules.) Tj ET
+BT /F1 10 Tf 66.00 533.25 Td (- Origin-country laws.) Tj ET
+BT /F1 10 Tf 66.00 518.25 Td (- Destination-country laws.) Tj ET
+BT /F1 10 Tf 54.00 495.00 Td (CarryLink does not inspect items and does not guarantee delivery.) Tj ET
+BT /F2 16 Tf 54.00 461.75 Td (17. Safety Checklist for Senders) Tj ET
+BT /F1 10 Tf 54.00 426.50 Td (Before handing over an item:) Tj ET
+BT /F1 10 Tf 66.00 403.25 Td (- Confirm the item is legal.) Tj ET
+BT /F1 10 Tf 66.00 388.25 Td (- Confirm the item is permitted by the airline.) Tj ET
+BT /F1 10 Tf 66.00 373.25 Td (- Confirm the item is permitted by customs.) Tj ET
+BT /F1 10 Tf 66.00 358.25 Td (- Describe the item accurately.) Tj ET
+BT /F1 10 Tf 66.00 343.25 Td (- Do not hide restricted items.) Tj ET
+BT /F1 10 Tf 66.00 328.25 Td (- Let the traveler inspect the item.) Tj ET
+BT /F1 10 Tf 66.00 313.25 Td (- Do not pressure the traveler to accept.) Tj ET
+BT /F1 10 Tf 66.00 298.25 Td (- Agree on compensation clearly.) Tj ET
+BT /F1 10 Tf 66.00 283.25 Td (- Keep communication in the platform when possible.) Tj ET
+BT /F2 16 Tf 54.00 250.00 Td (18. Safety Checklist for Travelers) Tj ET
+BT /F1 10 Tf 54.00 214.75 Td (Before accepting an item:) Tj ET
+BT /F1 10 Tf 66.00 191.50 Td (- Ask what the item is.) Tj ET
+BT /F1 10 Tf 66.00 176.50 Td (- Inspect the item when possible.) Tj ET
+BT /F1 10 Tf 66.00 161.50 Td (- Refuse sealed or suspicious items if uncomfortable.) Tj ET
+BT /F1 10 Tf 66.00 146.50 Td (- Confirm weight and size.) Tj ET
+BT /F1 10 Tf 66.00 131.50 Td (- Confirm airline rules.) Tj ET
+BT /F1 10 Tf 66.00 116.50 Td (- Confirm customs rules.) Tj ET
+BT /F1 10 Tf 66.00 101.50 Td (- Refuse medicine, batteries, cash, liquids, or electronics if rules are unclear.) Tj ET
+BT /F1 10 Tf 66.00 86.50 Td (- Keep your own travel documents and luggage safe.) Tj ET
+BT /F1 10 Tf 66.00 71.50 Td (- Do not accept anything that creates legal risk.) Tj ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 2558 >>
+stream
+BT /F2 16 Tf 54.00 728.00 Td (19. Common User Scenarios) Tj ET
+BT /F2 12 Tf 54.00 686.75 Td (Scenario A: Sender in Canada Sends Documents to Lebanon) Tj ET
+BT /F1 10 Tf 66.00 658.50 Td (1. Sign up as Sender or Both.) Tj ET
+BT /F1 10 Tf 66.00 643.50 Td (2. Create a delivery request from Canada, Montreal to Lebanon, Beirut.) Tj ET
+BT /F1 10 Tf 66.00 628.50 Td (3. Choose a preferred date range.) Tj ET
+BT /F1 10 Tf 66.00 613.50 Td (4. Select Documents as the item category.) Tj ET
+BT /F1 10 Tf 66.00 598.50 Td (5. Confirm the item is legal and accurately described.) Tj ET
+BT /F1 10 Tf 66.00 583.50 Td (6. Search travelers from Montreal or Canada to Beirut or Lebanon.) Tj ET
+BT /F1 10 Tf 66.00 568.50 Td (7. Message a traveler.) Tj ET
+BT /F1 10 Tf 66.00 553.50 Td (8. Agree on inspection, pickup, delivery, and compensation.) Tj ET
+BT /F2 12 Tf 54.00 524.25 Td (Scenario B: Traveler Going Montreal to Beirut Posts Space) Tj ET
+BT /F1 10 Tf 66.00 496.00 Td (1. Sign up as Traveler or Both.) Tj ET
+BT /F1 10 Tf 66.00 481.00 Td (2. Post a trip from Canada, Montreal to Lebanon, Beirut.) Tj ET
+BT /F1 10 Tf 66.00 466.00 Td (3. Add departure and arrival dates.) Tj ET
+BT /F1 10 Tf 66.00 451.00 Td (4. Add available space, such as 3 kg.) Tj ET
+BT /F1 10 Tf 66.00 436.00 Td (5. Add accepted items, such as documents, clothing, or gifts.) Tj ET
+BT /F1 10 Tf 66.00 421.00 Td (6. Add items not accepted, such as medicine, batteries, liquids, or cash.) Tj ET
+BT /F1 10 Tf 66.00 406.00 Td (7. Review messages in Dashboard or Chat.) Tj ET
+BT /F2 12 Tf 54.00 376.75 Td (Scenario C: User Searches for a Traveler) Tj ET
+BT /F1 10 Tf 66.00 348.50 Td (1. Log in.) Tj ET
+BT /F1 10 Tf 66.00 333.50 Td (2. Open Find Traveler.) Tj ET
+BT /F1 10 Tf 66.00 318.50 Td (3. Enter From city or country.) Tj ET
+BT /F1 10 Tf 66.00 303.50 Td (4. Enter To city or country.) Tj ET
+BT /F1 10 Tf 66.00 288.50 Td (5. Add a date if needed.) Tj ET
+BT /F1 10 Tf 66.00 273.50 Td (6. Select Search.) Tj ET
+BT /F1 10 Tf 66.00 258.50 Td (7. Open View Details or Send Message.) Tj ET
+BT /F2 12 Tf 54.00 229.25 Td (Scenario D: Traveler Receives a Message) Tj ET
+BT /F1 10 Tf 66.00 201.00 Td (1. Open Dashboard.) Tj ET
+BT /F1 10 Tf 66.00 186.00 Td (2. Look for Trips with new messages.) Tj ET
+BT /F1 10 Tf 66.00 171.00 Td (3. Select View Messages.) Tj ET
+BT /F1 10 Tf 66.00 156.00 Td (4. Read the thread.) Tj ET
+BT /F1 10 Tf 66.00 141.00 Td (5. Reply to the sender.) Tj ET
+BT /F2 12 Tf 54.00 111.75 Td (Scenario E: User Updates Profile Countries) Tj ET
+BT /F1 10 Tf 66.00 83.50 Td (1. Open Profile.) Tj ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Length 2337 >>
+stream
+BT /F1 10 Tf 66.00 738.00 Td (2. Update current country and home country.) Tj ET
+BT /F1 10 Tf 66.00 723.00 Td (3. Save.) Tj ET
+BT /F1 10 Tf 66.00 708.00 Td (4. Return to Home or Find Traveler.) Tj ET
+BT /F1 10 Tf 66.00 693.00 Td (5. Suggested trips should better match those countries.) Tj ET
+BT /F2 16 Tf 54.00 659.75 Td (20. Troubleshooting) Tj ET
+BT /F2 12 Tf 54.00 618.50 Td (I cannot see Login and Sign up after logging out) Tj ET
+BT /F1 10 Tf 54.00 590.25 Td (Refresh the page or open the home page again. If still logged in, select the logout icon.) Tj ET
+BT /F2 12 Tf 54.00 561.00 Td (I am logged in but see Login and Sign up) Tj ET
+BT /F1 10 Tf 54.00 532.75 Td (Wait a moment or refresh. If the issue continues, log out and log in again.) Tj ET
+BT /F2 12 Tf 54.00 503.50 Td (My trip does not appear) Tj ET
+BT /F1 10 Tf 54.00 475.25 Td (Check that:) Tj ET
+BT /F1 10 Tf 66.00 452.00 Td (- You are logged into the same account that posted it.) Tj ET
+BT /F1 10 Tf 66.00 437.00 Td (- The departure date is today or in the future.) Tj ET
+BT /F1 10 Tf 66.00 422.00 Td (- The trip status is active.) Tj ET
+BT /F1 10 Tf 66.00 407.00 Td (- The trip was saved successfully.) Tj ET
+BT /F1 10 Tf 54.00 383.75 Td (Past trips are hidden automatically.) Tj ET
+BT /F2 12 Tf 54.00 354.50 Td (I cannot select a past trip date) Tj ET
+BT /F1 10 Tf 54.00 326.25 Td (This is expected. CarryLink does not allow posting trips with past dates.) Tj ET
+BT /F2 12 Tf 54.00 297.00 Td (I cannot message myself) Tj ET
+BT /F1 10 Tf 54.00 268.75 Td (This is expected. If the trip belongs to you, use View Messages to read conversations from other users.) Tj ET
+BT /F2 12 Tf 54.00 239.50 Td (I do not see new messages) Tj ET
+BT /F1 10 Tf 54.00 211.25 Td (Open Chat or Dashboard and wait a few seconds. The page refreshes automatically when you are active. If) Tj ET
+BT /F1 10 Tf 54.00 196.25 Td (you are inactive for 2 minutes, you will be logged out for safety.) Tj ET
+BT /F2 12 Tf 54.00 167.00 Td (I see a hydration warning in development) Tj ET
+BT /F1 10 Tf 54.00 138.75 Td (Some browser extensions add attributes to inputs and buttons before the page loads. The app suppresses) Tj ET
+BT /F1 10 Tf 54.00 123.75 Td (known harmless cases, but disabling form-filling extensions can remove the warning.) Tj ET
+BT /F2 16 Tf 54.00 90.50 Td (21. Best Practices) Tj ET
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 23 0 R >>
+endobj
+25 0 obj
+<< /Length 2377 >>
+stream
+BT /F1 10 Tf 54.00 738.00 Td (For senders:) Tj ET
+BT /F1 10 Tf 66.00 714.75 Td (- Be honest and specific about the item.) Tj ET
+BT /F1 10 Tf 66.00 699.75 Td (- Offer fair compensation.) Tj ET
+BT /F1 10 Tf 66.00 684.75 Td (- Keep the item small and simple.) Tj ET
+BT /F1 10 Tf 66.00 669.75 Td (- Do not ask travelers to carry anything questionable.) Tj ET
+BT /F1 10 Tf 66.00 654.75 Td (- Respect the traveler's right to refuse.) Tj ET
+BT /F1 10 Tf 54.00 631.50 Td (For travelers:) Tj ET
+BT /F1 10 Tf 66.00 608.25 Td (- Set clear restrictions.) Tj ET
+BT /F1 10 Tf 66.00 593.25 Td (- Do not accept items you cannot inspect.) Tj ET
+BT /F1 10 Tf 66.00 578.25 Td (- Decline anything suspicious.) Tj ET
+BT /F1 10 Tf 66.00 563.25 Td (- Keep all agreement details in writing.) Tj ET
+BT /F1 10 Tf 66.00 548.25 Td (- Prioritize legal and travel safety over compensation.) Tj ET
+BT /F1 10 Tf 54.00 525.00 Td (For everyone:) Tj ET
+BT /F1 10 Tf 66.00 501.75 Td (- Use clear communication.) Tj ET
+BT /F1 10 Tf 66.00 486.75 Td (- Meet in safe public places.) Tj ET
+BT /F1 10 Tf 66.00 471.75 Td (- Confirm identity before handoff.) Tj ET
+BT /F1 10 Tf 66.00 456.75 Td (- Follow all laws and rules.) Tj ET
+BT /F1 10 Tf 66.00 441.75 Td (- Report suspicious behavior when admin tools are available.) Tj ET
+BT /F2 16 Tf 54.00 408.50 Td (22. Quick Reference) Tj ET
+BT /F1 10 Tf 54.00 373.25 Td (To send an item:) Tj ET
+BT /F1 10 Tf 66.00 350.00 Td (1. Sign up.) Tj ET
+BT /F1 10 Tf 66.00 335.00 Td (2. Create delivery request.) Tj ET
+BT /F1 10 Tf 66.00 320.00 Td (3. Search travelers.) Tj ET
+BT /F1 10 Tf 66.00 305.00 Td (4. Message traveler.) Tj ET
+BT /F1 10 Tf 66.00 290.00 Td (5. Agree on details.) Tj ET
+BT /F1 10 Tf 66.00 275.00 Td (6. Follow safety rules.) Tj ET
+BT /F1 10 Tf 54.00 251.75 Td (To carry an item:) Tj ET
+BT /F1 10 Tf 66.00 228.50 Td (1. Sign up.) Tj ET
+BT /F1 10 Tf 66.00 213.50 Td (2. Post trip.) Tj ET
+BT /F1 10 Tf 66.00 198.50 Td (3. Wait for messages.) Tj ET
+BT /F1 10 Tf 66.00 183.50 Td (4. Review item details.) Tj ET
+BT /F1 10 Tf 66.00 168.50 Td (5. Agree or decline.) Tj ET
+BT /F1 10 Tf 66.00 153.50 Td (6. Follow safety rules.) Tj ET
+BT /F1 10 Tf 54.00 130.25 Td (To manage activity:) Tj ET
+BT /F1 10 Tf 66.00 107.00 Td (1. Use Dashboard.) Tj ET
+BT /F1 10 Tf 66.00 92.00 Td (2. Open My posted trips.) Tj ET
+BT /F1 10 Tf 66.00 77.00 Td (3. Open My delivery requests.) Tj ET
+endstream
+endobj
+26 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 25 0 R >>
+endobj
+27 0 obj
+<< /Length 688 >>
+stream
+BT /F1 10 Tf 66.00 738.00 Td (4. Open My matches.) Tj ET
+BT /F1 10 Tf 66.00 723.00 Td (5. Open My conversations.) Tj ET
+BT /F2 16 Tf 54.00 689.75 Td (23. Important Disclaimer) Tj ET
+BT /F1 10 Tf 54.00 654.50 Td (CarryLink is a platform for matching and communication. Users are responsible for their own decisions,) Tj ET
+BT /F1 10 Tf 54.00 639.50 Td (agreements, legal compliance, airline compliance, customs compliance, and destination-country compliance.) Tj ET
+BT /F1 10 Tf 54.00 616.25 Td (CarryLink does not inspect items, does not verify item legality, does not guarantee delivery, and does) Tj ET
+BT /F1 10 Tf 54.00 601.25 Td (not assume responsibility for user agreements.) Tj ET
+endstream
+endobj
+28 0 obj
+<< /Type /Page /Parent 29 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 27 0 R >>
+endobj
+29 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R 28 0 R] /Count 13 >>
+endobj
+30 0 obj
+<< /Type /Catalog /Pages 29 0 R >>
+endobj
+xref
+0 31
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000000154 00000 n 
+0000003021 00000 n 
+0000003158 00000 n 
+0000005650 00000 n 
+0000005787 00000 n 
+0000008535 00000 n 
+0000008672 00000 n 
+0000011275 00000 n 
+0000011413 00000 n 
+0000013871 00000 n 
+0000014010 00000 n 
+0000016559 00000 n 
+0000016698 00000 n 
+0000019101 00000 n 
+0000019240 00000 n 
+0000021781 00000 n 
+0000021920 00000 n 
+0000024668 00000 n 
+0000024807 00000 n 
+0000027418 00000 n 
+0000027557 00000 n 
+0000029947 00000 n 
+0000030086 00000 n 
+0000032516 00000 n 
+0000032655 00000 n 
+0000033395 00000 n 
+0000033534 00000 n 
+0000033675 00000 n 
+trailer
+<< /Size 31 /Root 30 0 R >>
+startxref
+33726
+%%EOF
