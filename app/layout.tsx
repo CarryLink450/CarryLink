@@ -8,12 +8,20 @@ import { brandName } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: `${brandName} | Trusted peer travel delivery`,
-  description: "Match senders with trusted travelers for small international deliveries."
+  description: "Match senders with trusted travelers for small international deliveries.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg"
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <AdSenseScript />
+      </head>
       <body suppressHydrationWarning>
         <script
           dangerouslySetInnerHTML={{
@@ -49,7 +57,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `
           }}
         />
-        <AdSenseScript />
         <Header />
         <NonHomeAdSlots position="top" />
         <main>{children}</main>
