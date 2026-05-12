@@ -4,6 +4,7 @@ import { logoutAction } from "@/app/actions";
 import { getCurrentAccount } from "@/lib/data";
 import { brandName } from "@/lib/utils";
 import { AutoRefresh } from "./AutoRefresh";
+import { MobileMenu } from "./MobileMenu";
 import { SessionTimeout } from "./SessionTimeout";
 
 const navItems = [
@@ -39,6 +40,7 @@ export async function Header() {
           </nav>
           {currentAccount ? (
             <div className="flex items-center gap-2">
+              <MobileMenu items={navItems} />
               <Link href="/profile" className="inline-flex items-center gap-2 rounded-lg bg-skywash px-3 py-2 text-sm font-semibold text-trust hover:bg-trust hover:text-white">
                 <UserCircle size={17} aria-hidden />
                 <span className="hidden sm:inline">{currentAccount.displayName}</span>
@@ -52,6 +54,7 @@ export async function Header() {
             </div>
           ) : (
             <div className="flex items-center gap-2">
+              <MobileMenu items={navItems} />
               <Link href="/login" className="hidden rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 sm:block">
                 Login
               </Link>
@@ -61,15 +64,6 @@ export async function Header() {
             </div>
           )}
         </div>
-        <nav className="border-t border-slate-100 px-4 pb-3 md:hidden" aria-label="Mobile navigation">
-          <div className="flex gap-2 overflow-x-auto pb-1">
-            {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="shrink-0 rounded-full bg-skywash px-3 py-1.5 text-xs font-semibold text-trust">
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </nav>
       </header>
     </>
   );
