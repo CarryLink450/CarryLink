@@ -1,62 +1,6 @@
 import type { Conversation, DeliveryRequest, Message, Trip, User } from "@/types";
 
-export const users: User[] = [
-  {
-    id: "u-sara",
-    fullName: "Sara Haddad",
-    email: "sara.haddad@example.com",
-    phone: "+1 514 555 0124",
-    currentCountry: "Canada",
-    homeCountry: "Lebanon",
-    userType: "Sender",
-    avatarInitials: "SH",
-    verified: true
-  },
-  {
-    id: "u-karim",
-    fullName: "Karim Mansour",
-    email: "karim.mansour@example.com",
-    phone: "+1 438 555 0198",
-    currentCountry: "Canada",
-    homeCountry: "Lebanon",
-    userType: "Traveler",
-    avatarInitials: "KM",
-    verified: true
-  },
-  {
-    id: "u-nour",
-    fullName: "Nour El Khoury",
-    email: "nour.khoury@example.com",
-    phone: "+961 70 555 902",
-    currentCountry: "Lebanon",
-    homeCountry: "Canada",
-    userType: "Both",
-    avatarInitials: "NE",
-    verified: true
-  },
-  {
-    id: "u-amina",
-    fullName: "Amina Diop",
-    email: "amina.diop@example.com",
-    phone: "+33 6 55 55 22 10",
-    currentCountry: "France",
-    homeCountry: "Senegal",
-    userType: "Both",
-    avatarInitials: "AD",
-    verified: false
-  },
-  {
-    id: "u-david",
-    fullName: "David Chen",
-    email: "david.chen@example.com",
-    phone: "+1 647 555 0117",
-    currentCountry: "Canada",
-    homeCountry: "Singapore",
-    userType: "Traveler",
-    avatarInitials: "DC",
-    verified: true
-  }
-];
+export const users: User[] = [];
 
 export const trips: Trip[] = [
   {
