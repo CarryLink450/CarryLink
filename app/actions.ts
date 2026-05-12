@@ -31,6 +31,29 @@ function phoneForSupabaseAuth(phone: string) {
   return /^\+[1-9]\d{7,14}$/.test(compact) ? compact : undefined;
 }
 
+async function findAuthUserByEmail(email: string) {
+  const serviceSupabase = createServiceSupabaseClient();
+  const targetEmail = email.toLowerCase();
+  let page = 1;
+
+  while (page <= 10) {
+    const { data, error } = await serviceSupabase.auth.admin.listUsers({
+      page,
+      perPage: 1000
+    });
+
+    if (error) return null;
+
+    const user = data.users.find((item) => item.email?.toLowerCase() === targetEmail);
+    if (user) return user;
+    if (data.users.length < 1000) return null;
+
+    page += 1;
+  }
+
+  return null;
+}
+
 function safeFileName(name: string) {
   return name.toLowerCase().replace(/[^a-z0-9.-]/g, "-").replace(/-+/g, "-");
 }
@@ -41,6 +64,38 @@ function todayIsoDate() {
 
 function dateTime(value: string) {
   return new Date(`${value}T00:00:00`).getTime();
+}
+
+async function upsertProfileForAuthUser({
+  authUserId,
+  currentCountry,
+  email,
+  fullName,
+  homeCountry,
+  phone,
+  userType
+}: {
+  authUserId: string;
+  currentCountry: string;
+  email: string;
+  fullName: string;
+  homeCountry: string;
+  phone: string;
+  userType: string;
+}) {
+  const serviceSupabase = createServiceSupabaseClient();
+
+  return serviceSupabase.from("profiles").upsert({
+    auth_user_id: authUserId,
+    full_name: fullName,
+    email,
+    phone,
+    current_country: currentCountry,
+    home_country: homeCountry,
+    user_type: userType,
+    avatar_initials: initials(fullName),
+    verified: false
+  }, { onConflict: "auth_user_id" });
 }
 
 async function requireCurrentProfileId() {
@@ -125,21 +180,76 @@ export async function signupAction(formData: FormData) {
   });
 
   if (createUserError || !createdUser.user) {
-    const reason = createUserError?.message.toLowerCase().includes("already") ? "account_exists" : "signup_failed";
-    redirect(`/signup?error=${reason}`);
+    const alreadyExists = createUserError?.message.toLowerCase().includes("already");
+
+    if (!alreadyExists) {
+      redirect("/signup?error=signup_failed");
+    }
+
+    const existingAuthUser = await findAuthUserByEmail(email);
+    if (!existingAuthUser) {
+      redirect("/signup?error=account_exists");
+    }
+
+    const { data: existingProfile } = await serviceSupabase
+      .from("profiles")
+      .select("id")
+      .eq("auth_user_id", existingAuthUser.id)
+      .maybeSingle();
+
+    if (existingProfile) {
+      redirect("/signup?error=account_exists");
+    }
+
+    const { error: updateUserError } = await serviceSupabase.auth.admin.updateUserById(existingAuthUser.id, {
+      password,
+      ...(authPhone ? { phone: authPhone, phone_confirm: true } : {}),
+      email_confirm: true,
+      user_metadata: {
+        ...existingAuthUser.user_metadata,
+        full_name: fullName,
+        phone,
+        current_country: currentCountry,
+        home_country: homeCountry,
+        user_type: userType
+      }
+    });
+
+    if (updateUserError) {
+      redirect("/signup?error=signup_failed");
+    }
+
+    const { error: repairedProfileError } = await upsertProfileForAuthUser({
+      authUserId: existingAuthUser.id,
+      currentCountry,
+      email,
+      fullName,
+      homeCountry,
+      phone,
+      userType
+    });
+
+    if (repairedProfileError) {
+      redirect("/signup?error=profile_failed");
+    }
+
+    const authSupabase = await createAuthSupabaseServerClient();
+    const { error: signInError } = await authSupabase.auth.signInWithPassword({ email, password });
+
+    if (signInError) redirect("/login?message=account_created");
+
+    redirect("/dashboard");
   }
 
-  const { error: profileError } = await serviceSupabase.from("profiles").upsert({
-    auth_user_id: createdUser.user.id,
-    full_name: fullName,
+  const { error: profileError } = await upsertProfileForAuthUser({
+    authUserId: createdUser.user.id,
+    currentCountry,
     email,
+    fullName,
+    homeCountry,
     phone,
-    current_country: currentCountry,
-    home_country: homeCountry,
-    user_type: userType,
-    avatar_initials: initials(fullName),
-    verified: false
-  }, { onConflict: "auth_user_id" });
+    userType
+  });
 
   if (profileError) redirect("/signup?error=profile_failed");
 
