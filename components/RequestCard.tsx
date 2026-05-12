@@ -20,19 +20,19 @@ export function RequestCard({
   const chatHref = isOwnRequest ? "/chat" : `/chat?request=${request.id}&recipient=${request.senderId}`;
   return (
     <article className="rounded-lg border border-slate-200 bg-white p-5 shadow-soft">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <p className="text-sm font-medium text-slate-500">{senderProfile.fullName}</p>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div className="min-w-0">
+          <p className="break-words text-sm font-medium text-slate-500">{senderProfile.fullName}</p>
           <h2 className="mt-1 text-xl font-semibold text-ink">
             {request.itemCategory}: {request.fromCity} to {request.toCity}
           </h2>
         </div>
-        {strength ? <MatchBadge strength={strength} /> : null}
+        <div className="shrink-0">{strength ? <MatchBadge strength={strength} /> : null}</div>
       </div>
       <div className="mt-4 grid gap-3 text-sm text-slate-600">
-        <p className="flex gap-2"><MapPin size={17} className="text-trust" aria-hidden /> {request.fromCountry} to {request.toCountry}</p>
-        <p className="flex gap-2"><CalendarDays size={17} className="text-trust" aria-hidden /> {formatDate(request.preferredStartDate)} - {formatDate(request.preferredEndDate)}</p>
-        <p className="flex gap-2"><Package size={17} className="text-trust" aria-hidden /> {request.approximateSize}, {request.approximateWeightKg} kg</p>
+        <p className="flex min-w-0 gap-2"><MapPin size={17} className="shrink-0 text-trust" aria-hidden /> <span className="min-w-0 break-words">{request.fromCountry} to {request.toCountry}</span></p>
+        <p className="flex min-w-0 gap-2"><CalendarDays size={17} className="shrink-0 text-trust" aria-hidden /> <span className="min-w-0 break-words">{formatDate(request.preferredStartDate)} - {formatDate(request.preferredEndDate)}</span></p>
+        <p className="flex min-w-0 gap-2"><Package size={17} className="shrink-0 text-trust" aria-hidden /> <span className="min-w-0 break-words">{request.approximateSize}, {request.approximateWeightKg} kg</span></p>
       </div>
       <p className="mt-4 text-sm text-slate-600">{request.itemDescription}</p>
       <p className="mt-2 text-sm font-semibold text-ink">{request.offeredCompensation}</p>

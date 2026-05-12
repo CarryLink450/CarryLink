@@ -24,22 +24,22 @@ export function TripCard({
   const chatHref = messagesHref ?? (isOwnTrip ? "/chat" : `/chat?trip=${trip.id}&recipient=${trip.travelerId}`);
   return (
     <article className="rounded-lg border border-slate-200 bg-white p-5 shadow-soft">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <p className="text-sm font-medium text-slate-500">{travelerProfile.fullName}</p>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div className="min-w-0">
+          <p className="break-words text-sm font-medium text-slate-500">{travelerProfile.fullName}</p>
           <h2 className="mt-1 text-xl font-semibold text-ink">
             {trip.fromCity} to {trip.toCity}
           </h2>
         </div>
-        <div className="flex flex-col items-end gap-2">
+        <div className="flex shrink-0 flex-row flex-wrap gap-2 sm:flex-col sm:items-end">
           {hasNewMessage ? <span className="rounded-full bg-coral px-2.5 py-1 text-xs font-semibold text-white">New message</span> : null}
           {strength ? <MatchBadge strength={strength} /> : null}
         </div>
       </div>
       <div className="mt-4 grid gap-3 text-sm text-slate-600">
-        <p className="flex gap-2"><MapPin size={17} className="text-trust" aria-hidden /> {trip.fromCountry} to {trip.toCountry}</p>
-        <p className="flex gap-2"><CalendarDays size={17} className="text-trust" aria-hidden /> {formatDate(trip.departureDate)} - {formatDate(trip.arrivalDate)}</p>
-        <p className="flex gap-2"><Luggage size={17} className="text-trust" aria-hidden /> {trip.availableSpace}</p>
+        <p className="flex min-w-0 gap-2"><MapPin size={17} className="shrink-0 text-trust" aria-hidden /> <span className="min-w-0 break-words">{trip.fromCountry} to {trip.toCountry}</span></p>
+        <p className="flex min-w-0 gap-2"><CalendarDays size={17} className="shrink-0 text-trust" aria-hidden /> <span className="min-w-0 break-words">{formatDate(trip.departureDate)} - {formatDate(trip.arrivalDate)}</span></p>
+        <p className="flex min-w-0 gap-2"><Luggage size={17} className="shrink-0 text-trust" aria-hidden /> <span className="min-w-0 break-words">{trip.availableSpace}</span></p>
       </div>
       <p className="mt-4 text-sm text-slate-600">Accepts: {trip.acceptedItemTypes.join(", ")}</p>
       <p className="mt-2 text-sm font-semibold text-ink">{trip.expectedCompensation}</p>

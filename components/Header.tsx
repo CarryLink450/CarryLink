@@ -23,12 +23,12 @@ export async function Header() {
       <SessionTimeout isAuthenticated={Boolean(currentAccount)} />
       <AutoRefresh isAuthenticated={Boolean(currentAccount)} />
       <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-2 font-semibold text-ink">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
+          <Link href="/" className="flex min-w-0 items-center gap-2 font-semibold text-ink">
             <span className="grid h-9 w-9 place-items-center rounded-lg bg-trust text-white">
               <PackageCheck size={19} aria-hidden />
             </span>
-            <span>{brandName}</span>
+            <span className="truncate">{brandName}</span>
           </Link>
           <nav className="hidden items-center gap-5 text-sm font-medium text-slate-600 md:flex">
             {navItems.map((item) => (
@@ -61,6 +61,15 @@ export async function Header() {
             </div>
           )}
         </div>
+        <nav className="border-t border-slate-100 px-4 pb-3 md:hidden" aria-label="Mobile navigation">
+          <div className="flex gap-2 overflow-x-auto pb-1">
+            {navItems.map((item) => (
+              <Link key={item.href} href={item.href} className="shrink-0 rounded-full bg-skywash px-3 py-1.5 text-xs font-semibold text-trust">
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </nav>
       </header>
     </>
   );
