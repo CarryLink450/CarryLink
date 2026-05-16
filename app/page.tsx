@@ -1,6 +1,5 @@
 import { ArrowRight, CheckCircle2, Handshake, Plane, ShieldCheck } from "lucide-react";
 import Image from "next/image";
-import { AdSlot } from "@/components/AdSlot";
 import { ButtonLink } from "@/components/ButtonLink";
 import { TripCard } from "@/components/TripCard";
 import { getAppData, getCurrentAccount } from "@/lib/data";
@@ -122,7 +121,6 @@ export default async function HomePage() {
       </section>
 
       <section className="section">
-        <AdSlot slot="1111111111" format="horizontal" className="mb-8" />
         <div className="grid gap-4 md:grid-cols-3">
           {steps.map((step) => (
             <article key={step.title} className={`rounded-lg border p-5 shadow-soft ${step.className}`}>
@@ -147,10 +145,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="section">
-        <AdSlot slot="1717171717" format="horizontal" />
-      </section>
-
       <section className="section grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <ShieldCheck className="text-coral" size={30} aria-hidden />
@@ -171,10 +165,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="section grid gap-5 pt-0 lg:grid-cols-2">
-        <AdSlot slot="1818181818" format="rectangle" />
-        <AdSlot slot="2222222222" format="rectangle" />
-      </section>
     </>
   );
 }

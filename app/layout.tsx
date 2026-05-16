@@ -3,7 +3,6 @@ import "./globals.css";
 import { AdSenseScript } from "@/components/AdSenseScript";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { NonHomeAdSlots } from "@/components/NonHomeAdSlots";
 import { brandName } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -58,9 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <Header />
-        <NonHomeAdSlots position="top" />
         <main>{children}</main>
-        <NonHomeAdSlots position="bottom" />
         <Footer />
       </body>
     </html>

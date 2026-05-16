@@ -2,16 +2,43 @@ import Link from "next/link";
 import { signupAction } from "@/app/actions";
 import { PageHeader } from "@/components/PageHeader";
 
+const knownErrors: Record<string, string> = {
+  account_exists: "An account already exists for that email. Please log in instead.",
+  email_timeout: "Supabase Auth returned a 504 timeout while sending the email confirmation. Check your Supabase SMTP host, port, username, password, sender email, and provider SMTP access.",
+  profile_failed: "Account was created, but profile setup failed. Please contact support or try again.",
+  signup_failed: "Signup failed. Please check the details and try again."
+};
+
+function signupErrorMessage(error?: string) {
+  if (!error) return null;
+
+  const message = knownErrors[error] ?? error;
+  if (!message.trim() || message === "{}") {
+    return "Signup failed. Please check the details and try again.";
+  }
+
+  return message;
+}
+
 export default async function SignupPage({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
   const params = await searchParams;
+  const errorMessage = signupErrorMessage(params.error);
+
   return (
     <>
       <PageHeader title="Create your profile" description="Tell other members who you are and how you plan to use CarryLink." />
       <section className="section max-w-3xl">
         <form action={signupAction} className="rounded-lg border border-slate-200 bg-white p-6 shadow-soft">
-          {params.error === "account_exists" ? <p className="mb-4 rounded-lg bg-coral/10 p-3 text-sm text-coral">An account already exists for that email. Please log in instead.</p> : null}
-          {params.error === "profile_failed" ? <p className="mb-4 rounded-lg bg-coral/10 p-3 text-sm text-coral">Account was created, but profile setup failed. Please contact support or try again.</p> : null}
-          {params.error === "signup_failed" ? <p className="mb-4 rounded-lg bg-coral/10 p-3 text-sm text-coral">Signup failed. Please check the details and try again.</p> : null}
+          {errorMessage ? (
+            <div className="mb-4 rounded-lg bg-coral/10 p-3 text-sm text-coral">
+              <p>{errorMessage}</p>
+              {params.error === "account_exists" ? (
+                <Link className="mt-2 inline-flex font-semibold text-trust" href="/login">
+                  Go to login
+                </Link>
+              ) : null}
+            </div>
+          ) : null}
           <div className="grid gap-4 md:grid-cols-2">
             <div>
               <label className="label" htmlFor="fullName">Full name</label>

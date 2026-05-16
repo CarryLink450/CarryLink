@@ -1,5 +1,4 @@
 import { AlertTriangle, ShieldCheck } from "lucide-react";
-import { AdSlot } from "@/components/AdSlot";
 import { PageHeader } from "@/components/PageHeader";
 
 const prohibited = [
@@ -34,9 +33,6 @@ export default function SafetyPage() {
             Travelers should inspect items, decline anything unclear, avoid sealed packages they cannot verify, and keep written confirmation of the agreed contents. Senders should accurately describe every item and provide documentation when required.
           </p>
         </div>
-      </section>
-      <section className="section pt-0">
-        <AdSlot slot="1212121212" format="horizontal" />
       </section>
     </>
   );

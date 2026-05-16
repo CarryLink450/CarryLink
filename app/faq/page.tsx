@@ -1,4 +1,3 @@
-import { AdSlot } from "@/components/AdSlot";
 import { PageHeader } from "@/components/PageHeader";
 
 const faqs = [
@@ -22,7 +21,6 @@ export default function FAQPage() {
             </details>
           ))}
         </div>
-        <AdSlot slot="1010101010" format="horizontal" className="mt-8" />
       </section>
     </>
   );

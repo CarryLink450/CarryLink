@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import { AdSlot } from "@/components/AdSlot";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHeader } from "@/components/PageHeader";
 import { SafetyNotice } from "@/components/SafetyNotice";
@@ -35,7 +34,6 @@ export default async function RequestDetailsPage({ params }: { params: Promise<{
         </div>
         <div className="grid content-start gap-5">
           <SafetyNotice />
-          <AdSlot slot="1414141414" format="rectangle" />
         </div>
       </section>
     </>

@@ -1,5 +1,6 @@
 "use server";
 
+import { headers } from "next/headers";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { createAuthSupabaseServerClient, createServiceSupabaseClient, isSupabaseConfigured } from "@/lib/supabase/server";
@@ -8,6 +9,61 @@ function requireValue(formData: FormData, key: string) {
   const value = String(formData.get(key) ?? "").trim();
   if (!value) throw new Error(`${key} is required`);
   return value;
+}
+
+function requireSignupValue(formData: FormData, key: string, label: string) {
+  const value = String(formData.get(key) ?? "").trim();
+  if (!value) redirectWithSignupError(`${label} is required.`);
+  return value;
+}
+
+async function getSiteUrl() {
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL ?? process.env.SITE_URL;
+  if (configuredUrl) return configuredUrl.replace(/\/$/, "");
+
+  const headerStore = await headers();
+  const host = headerStore.get("x-forwarded-host") ?? headerStore.get("host") ?? "localhost:3000";
+  if (host.startsWith("127.0.0.1")) return `http://${host}`;
+
+  const protocol = headerStore.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
+
+  return `${protocol}://${host}`;
+}
+
+function readableError(error: unknown, fallback: string) {
+  if (!error) return fallback;
+  if (typeof error === "string") return error.trim() || fallback;
+  if (error instanceof Error) {
+    const authError = error as Error & { status?: number };
+    if (authError.name === "AuthRetryableFetchError" || authError.status === 504) {
+      return "Supabase Auth returned a 504 timeout while sending the email confirmation. Check your Supabase SMTP host, port, username, password, sender email, and provider SMTP access.";
+    }
+
+    return authError.message && authError.message !== "{}" ? authError.message : fallback;
+  }
+
+  if (typeof error === "object") {
+    const details = error as Record<string, unknown>;
+    if (details.name === "AuthRetryableFetchError" || details.status === 504) {
+      return "Supabase Auth returned a 504 timeout while sending the email confirmation. Check your Supabase SMTP host, port, username, password, sender email, and provider SMTP access.";
+    }
+
+    const fields = ["message", "error_description", "details", "hint", "code"];
+
+    for (const field of fields) {
+      const value = details[field];
+      if (typeof value === "string" && value.trim() && value !== "{}") return value;
+    }
+
+    const serialized = JSON.stringify(details);
+    return serialized && serialized !== "{}" ? serialized : fallback;
+  }
+
+  return fallback;
+}
+
+function redirectWithSignupError(error: unknown, fallback = "Signup failed. Please check the details and try again."): never {
+  redirect(`/signup?error=${encodeURIComponent(readableError(error, fallback))}`);
 }
 
 function splitList(value: string) {
@@ -135,55 +191,95 @@ export async function loginAction(formData: FormData) {
 export async function signupAction(formData: FormData) {
   if (!isSupabaseConfigured()) redirect("/signup");
 
-  const email = requireValue(formData, "email");
-  const password = requireValue(formData, "password");
-  const fullName = requireValue(formData, "fullName");
-  const phone = requireValue(formData, "phone");
-  const currentCountry = requireValue(formData, "currentCountry");
-  const homeCountry = requireValue(formData, "homeCountry");
-  const userType = requireValue(formData, "userType");
+  const email = requireSignupValue(formData, "email", "Email");
+  const password = requireSignupValue(formData, "password", "Password");
+  const fullName = requireSignupValue(formData, "fullName", "Full name");
+  const phone = requireSignupValue(formData, "phone", "Phone number");
+  const currentCountry = requireSignupValue(formData, "currentCountry", "Current country");
+  const homeCountry = requireSignupValue(formData, "homeCountry", "Home country");
+  const userType = requireSignupValue(formData, "userType", "User type");
 
-  if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {
-    const supabase = await createAuthSupabaseServerClient();
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        data: {
+  if (password.length < 8) {
+    redirectWithSignupError("Password must be at least 8 characters.");
+  }
+
+  const authPhone = phoneForSupabaseAuth(phone);
+  const siteUrl = await getSiteUrl();
+  const authSupabase = await createAuthSupabaseServerClient();
+  const serviceSupabase = process.env.SUPABASE_SERVICE_ROLE_KEY ? createServiceSupabaseClient() : null;
+
+  if (serviceSupabase) {
+    const existingAuthUser = await findAuthUserByEmail(email);
+
+    if (existingAuthUser) {
+      const { data: existingProfile } = await serviceSupabase
+        .from("profiles")
+        .select("id")
+        .eq("auth_user_id", existingAuthUser.id)
+        .maybeSingle();
+
+      if (existingProfile) {
+        redirect("/signup?error=account_exists");
+      }
+
+      const { error: updateUserError } = await serviceSupabase.auth.admin.updateUserById(existingAuthUser.id, {
+        password,
+        ...(authPhone ? { phone: authPhone, phone_confirm: true } : {}),
+        user_metadata: {
+          ...existingAuthUser.user_metadata,
           full_name: fullName,
           phone,
           current_country: currentCountry,
           home_country: homeCountry,
           user_type: userType
         }
-      }
-    });
+      });
 
-    if (error || !data.user) redirect("/signup?error=signup_failed");
-    redirect(data.session ? "/dashboard" : "/login?message=check_email");
+      if (updateUserError) redirectWithSignupError(updateUserError);
+
+      const { error: repairedProfileError } = await upsertProfileForAuthUser({
+        authUserId: existingAuthUser.id,
+        currentCountry,
+        email,
+        fullName,
+        homeCountry,
+        phone,
+        userType
+      });
+
+      if (repairedProfileError) redirectWithSignupError(repairedProfileError);
+
+      const { error: resetError } = await authSupabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${siteUrl}/auth/callback?next=/reset-password`
+      });
+
+      if (resetError) redirectWithSignupError(resetError);
+
+      redirect("/login?message=profile_repaired");
+    }
   }
 
-  const serviceSupabase = createServiceSupabaseClient();
-  const authPhone = phoneForSupabaseAuth(phone);
-  const { data: createdUser, error: createUserError } = await serviceSupabase.auth.admin.createUser({
+  const { data: createdUser, error: createUserError } = await authSupabase.auth.signUp({
     email,
     password,
-    ...(authPhone ? { phone: authPhone, phone_confirm: true } : {}),
-    email_confirm: true,
-    user_metadata: {
-      full_name: fullName,
-      phone,
-      current_country: currentCountry,
-      home_country: homeCountry,
-      user_type: userType
+    options: {
+      emailRedirectTo: `${siteUrl}/auth/confirm`,
+      data: {
+        full_name: fullName,
+        phone,
+        current_country: currentCountry,
+        home_country: homeCountry,
+        user_type: userType
+      }
     }
   });
 
   if (createUserError || !createdUser.user) {
     const alreadyExists = createUserError?.message.toLowerCase().includes("already");
+    const repairSupabase = serviceSupabase;
 
-    if (!alreadyExists) {
-      redirect("/signup?error=signup_failed");
+    if (!alreadyExists || !repairSupabase) {
+      redirectWithSignupError(createUserError);
     }
 
     const existingAuthUser = await findAuthUserByEmail(email);
@@ -191,7 +287,7 @@ export async function signupAction(formData: FormData) {
       redirect("/signup?error=account_exists");
     }
 
-    const { data: existingProfile } = await serviceSupabase
+    const { data: existingProfile } = await repairSupabase
       .from("profiles")
       .select("id")
       .eq("auth_user_id", existingAuthUser.id)
@@ -201,10 +297,9 @@ export async function signupAction(formData: FormData) {
       redirect("/signup?error=account_exists");
     }
 
-    const { error: updateUserError } = await serviceSupabase.auth.admin.updateUserById(existingAuthUser.id, {
+    const { error: updateUserError } = await repairSupabase.auth.admin.updateUserById(existingAuthUser.id, {
       password,
       ...(authPhone ? { phone: authPhone, phone_confirm: true } : {}),
-      email_confirm: true,
       user_metadata: {
         ...existingAuthUser.user_metadata,
         full_name: fullName,
@@ -215,9 +310,7 @@ export async function signupAction(formData: FormData) {
       }
     });
 
-    if (updateUserError) {
-      redirect("/signup?error=signup_failed");
-    }
+    if (updateUserError) redirectWithSignupError(updateUserError);
 
     const { error: repairedProfileError } = await upsertProfileForAuthUser({
       authUserId: existingAuthUser.id,
@@ -229,16 +322,19 @@ export async function signupAction(formData: FormData) {
       userType
     });
 
-    if (repairedProfileError) {
-      redirect("/signup?error=profile_failed");
-    }
+    if (repairedProfileError) redirectWithSignupError(repairedProfileError);
 
-    const authSupabase = await createAuthSupabaseServerClient();
-    const { error: signInError } = await authSupabase.auth.signInWithPassword({ email, password });
+    const { error: resetError } = await authSupabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${siteUrl}/auth/callback?next=/reset-password`
+    });
 
-    if (signInError) redirect("/login?message=account_created");
+    if (resetError) redirectWithSignupError(resetError);
 
-    redirect("/dashboard");
+    redirect("/login?message=profile_repaired");
+  }
+
+  if (createdUser.user.identities && createdUser.user.identities.length === 0) {
+    redirect("/signup?error=account_exists");
   }
 
   const { error: profileError } = await upsertProfileForAuthUser({
@@ -251,14 +347,9 @@ export async function signupAction(formData: FormData) {
     userType
   });
 
-  if (profileError) redirect("/signup?error=profile_failed");
+  if (profileError) redirectWithSignupError(profileError);
 
-  const authSupabase = await createAuthSupabaseServerClient();
-  const { error: signInError } = await authSupabase.auth.signInWithPassword({ email, password });
-
-  if (signInError) redirect("/login?message=account_created");
-
-  redirect("/dashboard");
+  redirect(createdUser.session ? "/dashboard" : "/login?message=check_email");
 }
 
 export async function logoutAction() {
@@ -266,6 +357,54 @@ export async function logoutAction() {
   const supabase = await createAuthSupabaseServerClient();
   await supabase.auth.signOut();
   redirect("/");
+}
+
+export async function forgotPasswordAction(formData: FormData) {
+  if (!isSupabaseConfigured()) redirect("/forgot-password");
+
+  const email = requireValue(formData, "email");
+  const siteUrl = await getSiteUrl();
+  const supabase = await createAuthSupabaseServerClient();
+  const { error } = await supabase.auth.resetPasswordForEmail(email, {
+    redirectTo: `${siteUrl}/auth/callback?next=/reset-password`
+  });
+
+  if (error) {
+    redirect(`/forgot-password?error=${encodeURIComponent(error.message)}`);
+  }
+
+  redirect("/login?message=reset_email_sent");
+}
+
+export async function updatePasswordAction(formData: FormData) {
+  if (!isSupabaseConfigured()) redirect("/login");
+
+  const password = requireValue(formData, "password");
+  const confirmPassword = requireValue(formData, "confirmPassword");
+
+  if (password.length < 8) {
+    redirect("/reset-password?error=Password must be at least 8 characters.");
+  }
+
+  if (password !== confirmPassword) {
+    redirect("/reset-password?error=Passwords do not match.");
+  }
+
+  const supabase = await createAuthSupabaseServerClient();
+  const { data } = await supabase.auth.getUser();
+
+  if (!data.user) {
+    redirect("/login?error=reset_session_expired");
+  }
+
+  const { error } = await supabase.auth.updateUser({ password });
+
+  if (error) {
+    redirect(`/reset-password?error=${encodeURIComponent(error.message)}`);
+  }
+
+  await supabase.auth.signOut();
+  redirect("/login?message=password_updated");
 }
 
 export async function updateProfileAction(formData: FormData) {

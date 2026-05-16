@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic";
 
 export default async function DashboardPage({ searchParams }: { searchParams: Promise<{ created?: string }> }) {
   const params = await searchParams;
-  const { conversations, deliveryRequests, messages, trips, users, source } = await getAppData();
+  const { conversations, deliveryRequests, messages, trips, users } = await getAppData();
   const currentAccount = await getCurrentAccount();
   const displayName = currentAccount?.displayName.split(" ")[0] ?? "there";
   const currentProfileId = currentAccount?.profile?.id;
@@ -50,7 +50,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
   const tripsWithNewMessages = myTrips.filter((trip) => newMessageByTripId.has(trip.id));
   return (
     <>
-      <PageHeader eyebrow="Dashboard" title={`Welcome back, ${displayName}`} description={`A practical view of your active requests, posted trips, matches, and conversations. Data source: ${source}.`} />
+      <PageHeader eyebrow="Dashboard" title={`Welcome back, ${displayName}`} description="A practical view of your active requests, posted trips, matches, and conversations." />
       <section className="section">
         {params.created === "trip" ? <p className="mb-5 rounded-lg bg-skywash p-4 text-sm font-semibold text-trust">Trip saved successfully.</p> : null}
         {params.created === "request" ? <p className="mb-5 rounded-lg bg-skywash p-4 text-sm font-semibold text-trust">Delivery request saved successfully.</p> : null}

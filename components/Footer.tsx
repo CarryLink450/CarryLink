@@ -19,6 +19,7 @@ export function Footer() {
         <div className="grid gap-2">
           <Link href="/safety">Safety guidelines</Link>
           <Link href="/faq">FAQ</Link>
+          <Link href="/contact-us">Contact us</Link>
           <Link href="/profile">Profile</Link>
         </div>
       </div>
